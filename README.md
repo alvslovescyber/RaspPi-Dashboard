@@ -3,7 +3,7 @@
 
 *A unified, local-first personal dashboard powered by Vue 3*
 
-![GlassPi Dashboard – Home](./docs/images/home.png)
+![GlassPi Dashboard – Home]
 
 GlassPi is a **self-hosted personal dashboard** designed to run locally (Raspberry Pi, desktop, or server) and sync everything you care about in one place — music, activity, tasks, weather, and AI-powered suggestions.
 
