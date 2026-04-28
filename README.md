@@ -1,133 +1,82 @@
+# Dashingly
 
-# GlassPi Dashboard
+A self-hosted personal dashboard for Raspberry Pi, desktop, or any local machine. Pulls together music, activity, tasks, weather, and AI suggestions in one place — all running locally, no cloud required.
 
-*A unified, local-first personal dashboard powered by Vue 3*
+Clone it, drop in your API keys, and it works.
 
-![GlassPi Dashboard – Home]
-
-GlassPi is a **self-hosted personal dashboard** designed to run locally (Raspberry Pi, desktop, or server) and sync everything you care about in one place — music, activity, tasks, weather, and AI-powered suggestions.
-
-The goal is simple:
-**clone the repo → add API keys → everything works flawlessly.**
-
-No fake data. No broken states. No waiting around.
+![Home](./docs/images/home.png)
 
 ---
 
-## ✨ Features
+## What's in it
 
-* 🎵 **Spotify – Now Playing**
+**Spotify** — real-time now playing, album art, playback controls. Shows a clean empty state if nothing's connected.
 
-  * Real-time playback status
-  * Album art, progress, controls
-  * Clean empty states when not connected
+**Health & Activity** — weekly running stats and step/calorie tracking via Strava. No Apple Health needed.
 
-* 🏃 **Strava – Activity & Health**
+**Tasks** — today, upcoming, and completed. Simple.
 
-  * Weekly running totals & goals
-  * Steps, calories, activity summaries
-  * Single-source health data (no Apple Health required)
+**Music page** — dedicated Spotify view with connection status.
 
-* 📖 **Daily Reading**
+**AI Suggestions** — generates suggestions on a schedule or on demand once you add an OpenAI key.
 
-  * Daily verse + recent history
-  * Progress tracking
-  * Clean completion flow
+**Weather** — location-based via Open-Meteo, auto-refreshes, supports °C/°F.
 
-* ✅ **Tasks**
-
-  * Today / Upcoming / Completed
-  * Minimal, distraction-free layout
-
-* 🤖 **AI Suggestions**
-
-  * Scheduled or manual generation
-  * Works instantly after API key is added
-  * Graceful error handling & empty states
-
-* 🌦 **Weather**
-
-  * Location-based via Open-Meteo
-  * Auto-refresh + manual refresh
-  * Unit selection (°C / °F)
+**Voice activation** — wake word support to dismiss the screensaver hands-free.
 
 ---
 
-## 🧱 Tech Stack
+## Screenshots
 
-* **Vue 3** (Composition API + `<script setup>`)
-* **TypeScript**
-* **Vite**
-* **Local-first storage** (designed to sync immediately once keys are added)
-* **Electron / Pi-friendly runtime** (no cloud dependency)
+### Home
 
----
+![Home](./docs/images/home.png)
 
-## 🔑 Configuration Philosophy
+### Health
 
-GlassPi does **not** ship with fake placeholders.
+![Health](./docs/images/health.png)
 
-* No Spotify UI unless Spotify is connected
-* No AI suggestions unless an OpenAI key is present
-* No health data unless Strava is connected
+### Tasks
 
-Once you enter your API keys:
+![Tasks](./docs/images/tasks.png)
 
-> **Everything syncs automatically and stays in sync.**
+### Music
 
-All configuration is done via the **Settings UI** — no `.env` editing required.
+![Music](./docs/images/music.png)
+
+### Settings
+
+![Settings](./docs/images/settings.png)
 
 ---
 
-## ⚙️ Setup
-
-### 1. Clone the repo
+## Setup
 
 ```bash
-git clone https://github.com/your-username/glasspi-dashboard.git
-cd glasspi-dashboard
-```
-
-### 2. Install dependencies
-
-```bash
+git clone https://github.com/alvsabel/dashingly.git
+cd dashingly
 npm install
-```
-
-### 3. Run locally
-
-```bash
 npm run dev
 ```
 
-### 4. Open Settings → Integrations
+Open Settings → Integrations and add your keys for Spotify, Strava, and OpenAI. That's it — the dashboard populates with real data immediately.
 
-Add your API keys for:
-
-* Spotify
-* Strava
-* OpenAI (for suggestions)
-
-That’s it.
-The dashboard will immediately populate with real data.
+No `.env` file editing. No fake placeholders. If a service isn't connected, its tile won't show.
 
 ---
 
-## 🧠 TypeScript & Vue Notes
+## Build
 
-This project uses **Vue 3 `<script setup>` SFCs**.
+```bash
+npm run build               # current platform
+npm run build:linux         # Linux x64
+npm run build:linux-arm64   # Raspberry Pi
+```
 
-Recommended IDE setup:
+---
 
-* **VS Code**
-* **Volar**
-* **TypeScript Vue Plugin (Volar)**
+## Stack
 
-### Type checking
+Vue 3 · TypeScript · Vite · Electron · Tailwind CSS · better-sqlite3
 
-TypeScript doesn’t understand `.vue` files by default, so this project uses:
-
-* `vue-tsc` instead of `tsc`
-
-
-
+Uses `vue-tsc` for type checking. Recommended IDE: VS Code + Volar.
