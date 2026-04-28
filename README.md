@@ -16,8 +16,6 @@ Clone it, drop in your API keys, and it works.
 
 **Tasks** — today, upcoming, and completed. Simple.
 
-**Music page** — dedicated Spotify view with connection status.
-
 **AI Suggestions** — generates suggestions on a schedule or on demand once you add an OpenAI key.
 
 **Weather** — location-based via Open-Meteo, auto-refreshes, supports °C/°F.
@@ -35,18 +33,6 @@ Clone it, drop in your API keys, and it works.
 ### Health
 
 ![Health](./docs/images/health.png)
-
-### Tasks
-
-![Tasks](./docs/images/tasks.png)
-
-### Music
-
-![Music](./docs/images/music.png)
-
-### Settings
-
-![Settings](./docs/images/settings.png)
 
 ---
 
